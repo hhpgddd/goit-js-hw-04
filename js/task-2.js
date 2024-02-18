@@ -1,8 +1,11 @@
-function makeArray(firstArray, secondArray, maxLength) {
-    const newArray = firstArray.concat(secondArray);
-    if (newArray.length >= maxLength) {
-        return newArray.slice(0, maxLength);
-    } else {
-        return newArray;
+function calcAverageCalories(days) {
+    let caloriesAvg = 0;
+
+    for (const calorie of days) {
+        caloriesAvg += calorie["calories"];
     }
+    if (days.length === 0) {
+        return 0;
+    }
+    return caloriesAvg / days.length;
 }

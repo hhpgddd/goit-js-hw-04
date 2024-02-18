@@ -1,4 +1,7 @@
-function slugify(title) {
-    const correctSlug = title.toLowerCase().split(" ").join("-");
-    return correctSlug;
+function isEnoughCapacity(products, containerSize) {
+    let sum = 0;
+    for (const product in products) {
+        sum += products[product];
+    }
+    return sum <= containerSize;
 }
